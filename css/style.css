@@ -1,0 +1,344 @@
+/* Reset básico y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #005A9C; /* Azul OSDE principal */
+    --secondary-color: #00AEEF; /* Azul OSDE secundario */
+    --accent-color: #FDB913; /* Amarillo para CTAs */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --white: #fff;
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente similar a OSDE */
+    --border-radius: 4px;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-color); /* O var(--white) si el accent es oscuro */
+}
+.btn-primary:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+.btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+.btn-tertiary {
+    background-color: #ccc;
+    color: var(--text-color);
+}
+.btn-tertiary:hover {
+    background-color: #bbb;
+}
+
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    max-height: 50px; /* Ajusta según tu logo */
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+.nav-menu li {
+    margin-left: 25px;
+}
+.nav-menu li a {
+    font-weight: 500;
+}
+.nav-toggle {
+    display: none; /* Se muestra en mobile */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: var(--primary-color) url('../img/banner-medico.jpg') no-repeat center center/cover; /* CAMBIA img/banner-medico.jpg por tu imagen de banner */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+.hero-content h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Secciones Generales */
+.section-padding {
+    padding: 60px 0;
+}
+.bg-light {
+    background-color: var(--light-gray);
+}
+
+/* Especialidades */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.especialidad-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.especialidad-card img {
+    max-height: 60px;
+    margin: 0 auto 15px auto;
+}
+.especialidad-card h3 {
+    color: var(--secondary-color);
+}
+
+/* Profesionales */
+.profesionales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.profesional-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.profesional-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 3px solid var(--secondary-color);
+}
+.profesional-card .bio {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Formulario de Turnos */
+#form-turnos {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+.form-group select[disabled] {
+    background-color: #e9ecef;
+    opacity: 0.7;
+}
+#mensaje-turno {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+
+/* Ubicación / Mapa */
+#mapa {
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-gray);
+    padding: 40px 0 20px 0;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-col h4 {
+    color: var(--white);
+    margin-bottom: 15px;
+    position: relative;
+}
+.footer-col h4::after { /* Pequeño subrayado decorativo */
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.footer-col p, .footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col a {
+    color: var(--light-gray);
+}
+.footer-col a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+.logo-footer {
+    max-height: 40px;
+    margin-top: 10px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Logo arriba, menú abajo */
+    }
+    .logo-container { /* Para centrar el logo */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .nav-menu {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--white); /* Fondo para el menú desplegable */
+        position: absolute;
+        top: 80px; /* Ajusta según altura del header */
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        display: flex; /* Se muestra con JS */
+    }
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .nav-menu li a {
+        display: block;
+        padding: 15px;
+    }
+    .nav-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+        position: absolute; /* Para posicionarlo si el logo no está centrado */
+        top: 25px; /* Ajusta según tu diseño */
+        right: 20px; /* Ajusta según tu diseño */
+    }
+
+    .hero-banner { padding: 60px 0; }
+    .hero-content h1 { font-size: 2rem; }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Columnas apiladas en mobile */
+        text-align: center;
+    }
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
