@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- DATOS (simulados, luego vendrán del backend) ---
     const profesionalesData = {
         traumatologia: [
-            { id: 1, nombre: "Dr. Juan Pérez", matricula: "MN 12345", foto: "img/raul.avif", bio: "Especialista en rodilla y cadera, artroscopias y reemplazos articulares." },
+            { id: 1, nombre: "Dr. Juan Pérez", matricula: "MN 12345", foto: "img/Raul.avif", bio: "Especialista en rodilla y cadera, artroscopias y reemplazos articulares." },
             { id: 2, nombre: "Dra. Ana Gómez", matricula: "MN 67890", foto: "img/dra2.avif", bio: "Experta en medicina deportiva y rehabilitación de lesiones de hombro y codo." }
         ],
         pediatria: [
