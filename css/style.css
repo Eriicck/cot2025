@@ -23,6 +23,26 @@ body {
     background-color: var(--white);
 }
 
+/* === Carrusel en Hero === */
+#hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+
 .container {
     width: 90%;
     max-width: 1100px;
@@ -126,7 +146,7 @@ header {
 
 /* Hero Banner */
 .hero-banner {
-    background: var(--primary-color) url('../img/banner-medico.jpg') no-repeat center center/cover; /* CAMBIA img/banner-medico.jpg por tu imagen de banner */
+    background: var(--primary-color) url('../img/banner1.jpg') no-repeat center center/cover; /* CAMBIA img/banner-medico.jpg por tu imagen de banner */
     color: var(--white);
     padding: 80px 0;
     text-align: center;
